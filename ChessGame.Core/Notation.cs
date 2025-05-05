@@ -1,7 +1,7 @@
 using System;
 using System.Collections.Generic;
 
-namespace ChessGame.Core.Notation {
+namespace ChessGame.Core {
     public static class Notation
     {
         static string[8] files = {'a', 'b', 'c', 'd', 'e', 'f', 'g', 'h'};

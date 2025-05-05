@@ -1,12 +1,11 @@
 using System;
-using namespace ChessGame.Core.Board
-namespace ChessGame.Core.Game {
+namespace ChessGame.Core {
     public class Game()
     {
         Board board;
         public Game()
         {
-            
+
         }
     }
 }

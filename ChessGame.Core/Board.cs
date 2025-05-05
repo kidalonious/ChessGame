@@ -1,10 +1,9 @@
 using System;
-using ChessGame.Core.Piece;
-using ChessGame.Core.Enums;
-namespace ChessGame.Core.Board {
+using ChessGame.Core;
+namespace ChessGame.Core {
     public class Board {
         Piece[,] squares = new Piece[8,8];
-        public Piece GetSquare(int rank, int file)
+        public Piece GetPiece(int rank, int file)
         {
             return this.squares[rank - 1, file - 1];
         }

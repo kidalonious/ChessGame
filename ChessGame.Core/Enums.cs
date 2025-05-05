@@ -1,4 +1,4 @@
-    namespace ChessGame.Core.Enums
+namespace ChessGame.Core {
     public enum PieceType {
         pawn,
         bishop,
@@ -12,3 +12,4 @@
         black,
         white
     }
+}

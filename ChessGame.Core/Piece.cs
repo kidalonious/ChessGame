@@ -1,6 +1,5 @@
 using System;
-using ChessGame.Core.Enums;
-namespace ChessGame.Core.Piece {
+namespace ChessGame.Core {
     public class Piece() 
     {
         public PieceType pieceType;
