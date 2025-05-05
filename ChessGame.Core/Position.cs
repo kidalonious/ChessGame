@@ -19,13 +19,13 @@ namespace ChessGame.Core {
             //   http://go.microsoft.com/fwlink/?LinkId=85238
             //
             
-            if (obj == null || GetType() != obj.GetType())
+            if (obj is not Position other)
             {
                 return false;
             }
             
             // TODO: write your implementation of Equals() here
-            return rank == obj.rank && file == obj.file
+            return rank == other.rank && file == other.file
         }
         
         // override object.GetHashCode
