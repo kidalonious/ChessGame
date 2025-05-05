@@ -9,7 +9,12 @@ namespace ChessGame.Core {
         override // override object.Equals
         public override bool Equals(object obj)
         {
+            if (ReferenceEquals(this, obj)) return true;
+            if (obj is not Move move) return false;
             
+            return Equals(endPosition, move.endPosition) &&
+            Equals(startPosition, move.startPosition) &&
+            Equals(promotionPiece, move.promotionPiece);
         }
         
         // override object.GetHashCode
