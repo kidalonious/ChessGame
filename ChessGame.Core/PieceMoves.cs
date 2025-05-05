@@ -3,22 +3,12 @@ using System;
 namespace ChessGame.Core {
     public static class PieceMoves
     {
-        Board board;
-        int rank;
-        int file;
-        Piece piece;
         public Dictionary<PieceType, var> pieceMap = {PieceType.pawn : this.PawnMoves, PieceType.bishop : this.BishopMoves,
                                                         PieceType.rook : this.RookMoves, PieceType.queen : this.QueenMoves, 
                                                         PieceType.king : this.KingMoves};
 
-        public PieceMoves(Board board, int rank, int file)
-        {
-            this.board = board;
-            this.rank = rank;
-            this.file = file;
-            this.piece = this.board.GetPiece(this.rank, this.file);
-        }
-        public HashSet<Move> PawnMoves( bool hasMoved )
+        
+        public HashSet<Move> PawnMoves( Board board, Position startPosition, bool hasMoved )
         {
             int direction;
             switch ( this.piece.pieceType ) 
@@ -39,27 +29,27 @@ namespace ChessGame.Core {
             // Check for potential captures at rank + direction, file + and - 1
 
         }
-        public HashSet<Move> BishopMoves()
+        public HashSet<Move> BishopMoves( Board board, Position startPosition )
         {
             // Check board.squares in rank + and - 1, file + and - 1 until collisions or board edge
             
         }
-        public HashSet<Move> KnightMoves()
+        public HashSet<Move> KnightMoves( Board board, Position startPosition )
         {
             // Check board.squares 
         }
-        public HashSet<Move> RookMoves()
+        public HashSet<Move> RookMoves( Board board, Position startPosition )
         {
             // check board.squares at rank + and - until collision or board edge, then file + and - until collision or board edge
 
         }
-        public HashSet<Move> QueenMoves()
+        public HashSet<Move> QueenMoves( Board board, Position startPosition )
         {
             // return the combination of RookMoves and BishopMoves
-            // Can use set operator, union
+            // Can use set operator union
             
         }
-        public HashSet<Move> KingMoves()
+        public HashSet<Move> KingMoves( Board board, Position startPosition )
         {
             // Check rank + and - 1, file + and - 1 permutated e.g. rank +, rank -, rank + file +, rank + file - etc
 
