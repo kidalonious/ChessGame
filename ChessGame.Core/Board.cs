@@ -1,15 +1,17 @@
 using System;
-using ChessGame.Core;
-namespace ChessGame.Core {
-    public class Board {
-        Piece[,] squares = new Piece[8,8];
-        public Piece GetPiece(int rank, int file)
+
+namespace ChessGame.Core
+{
+    public class Board
+    {
+        public Piece[,] squares = new Piece[8, 8];
+        public Piece GetPiece(Position position)
         {
-            return this.squares[rank - 1, file - 1];
+            return this.squares[position.rank - 1, position.file - 1];
         }
-        public void SetSquare(int rank, int file, Piece piece)
+        public void SetSquare(Position position, Piece piece)
         {
-            this.squares[rank - 1, file - 1] = piece;
+            this.squares[position.rank - 1, position.file - 1] = piece;
         }
     }
 }

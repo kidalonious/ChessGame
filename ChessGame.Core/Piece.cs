@@ -1,13 +1,9 @@
 using System;
-namespace ChessGame.Core {
-    public class Piece() 
+namespace ChessGame.Core
+{
+    public class Piece(PieceType pieceType, Color color)
     {
-        public PieceType pieceType;
-        public Color color;
-        public Piece(PieceType pieceType, Color color) 
-        {
-            this.color = color;
-            this.pieceType = pieceType;
-        }
+        public PieceType pieceType = pieceType;
+        public Color color = color;
     }
 }

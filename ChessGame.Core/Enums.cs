@@ -1,5 +1,7 @@
-namespace ChessGame.Core {
-    public enum PieceType {
+namespace ChessGame.Core
+{
+    public enum PieceType
+    {
         pawn,
         bishop,
         knight,
@@ -8,7 +10,8 @@ namespace ChessGame.Core {
         king
     }
 
-    public enum Color {
+    public enum Color
+    {
         black,
         white
     }

@@ -1,20 +1,21 @@
 using System;
 using System.Collections.Generic;
 
-namespace ChessGame.Core {
+namespace ChessGame.Core
+{
     public static class Notation
     {
-        static string[8] files = {'a', 'b', 'c', 'd', 'e', 'f', 'g', 'h'};
-        public int[] NotationToPosition(string notation) 
+        static char[] files = { 'a', 'b', 'c', 'd', 'e', 'f', 'g', 'h' };
+        public static int[] NotationToPosition(string notation)
         {
-            int file = files.IndexOf(notation[0]);
+            int file = Array.IndexOf(files, notation[0]);
             int rank = Convert.ToInt32(notation[1]);
             return [rank, file];
         }
 
-        public string PositionToNotation(int[2] position) 
+        public static string PositionToNotation(int[] position)
         {
-            string file = position[1]
+            int file = position[0];
             return string.Join(file, position[1]);
         }
     }
